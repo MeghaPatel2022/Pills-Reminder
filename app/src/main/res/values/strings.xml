@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Pills Reminder</string>
+
+    <string name="default_notification_channel_id">alarm_channel_id_01</string>
+    <string name="default_number_of_pills">Default number of pills</string>
+    <string name="no_reminder">No reminder</string>
+    <string name="_2">2</string>
+    <string name="_5">5</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="_20">20</string>
+    <string name="custom">Custom</string>
+    <string name="notification_settings">Notification Settings</string>
+    <string name="sounds">Sounds</string>
+    <string name="sound_definition" translatable="false">Snooze times, popup, max alarms, shake to take.</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="led_light">LED Light</string>
+</resources>

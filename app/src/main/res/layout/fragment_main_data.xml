@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp">
+
+
+        <ImageView
+            android:id="@+id/img_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:src="@drawable/ic_settting" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_main2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_below="@+id/rl_toolbar1">
+
+        <ImageView
+            android:id="@+id/ic_dr"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_main_pharma" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/ic_dr"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_stay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Stay Healthy!"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_20sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_stay"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Don't Forget to take your \nmedicine today."
+                android:textColor="@color/string_color"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_main2"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/up_curve">
+
+        <RelativeLayout
+            android:id="@+id/rl_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_last_month"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/_12sdp"
+                android:layout_toStartOf="@+id/tv_current_month"
+                android:src="@drawable/ic_lef_arrow" />
+
+            <TextView
+                android:id="@+id/tv_current_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="January 2020"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <ImageView
+                android:id="@+id/img_next_month"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_toEndOf="@+id/tv_current_month"
+                android:src="@drawable/ic_right_arrow" />
+
+        </RelativeLayout>
+
+
+        <devs.mulham.horizontalcalendar.HorizontalCalendarView
+            android:id="@+id/calanderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_month"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:sizeBottomText="14sp"
+            app:sizeMiddleText="20sp"
+            app:textColorSelected="#FFFF" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/img_add_new_med"
+            android:layout_below="@+id/calanderView"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            tools:listitem="@layout/item_main" />
+
+        <ImageView
+            android:id="@+id/img_add_new_med"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:src="@drawable/ic_group_940" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

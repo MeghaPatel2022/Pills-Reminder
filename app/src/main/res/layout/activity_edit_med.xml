@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".Activity.EditMedActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25sdp"
+        android:layout_marginBottom="21dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/img_back"
+            android:fontFamily="@font/mont_regular"
+            android:gravity="center|start"
+            android:text="Edit Medicine"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/mont_regular"
+            android:gravity="center|start"
+            android:text="SAVE"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/up_curve"
+        android:paddingStart="@dimen/_25sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_medName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/mont_regular"
+            android:text="Medicine Name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tv_schedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_medName"
+            android:layout_marginTop="7dp"
+            android:text="Scheduled for 12:00pm, today, 30 Jan."
+            android:textSize="@dimen/_13sdp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_strength"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/tv_schedule"
+            android:layout_marginLeft="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/img_str"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:src="@drawable/ic_strength" />
+
+            <EditText
+                android:id="@+id/et_strength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_toRightOf="@+id/img_str"
+                android:background="@android:color/transparent"
+                android:hint="What strength is the med? "
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/et_strength"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_toRightOf="@+id/img_str"
+                android:background="@color/string_color" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_pills"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/rl_strength"
+            android:layout_marginLeft="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/img_pills"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:src="@drawable/ic_pills" />
+
+            <EditText
+                android:id="@+id/et_pills"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_toEndOf="@+id/img_pills"
+                android:background="@android:color/transparent"
+                android:hint="Eg. 3"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:layout_below="@id/et_pills"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_toEndOf="@+id/img_pills"
+                android:background="@color/string_color" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

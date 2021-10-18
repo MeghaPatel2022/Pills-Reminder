@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_13sdp"
+    tools:context=".Activity.SoundActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_15sdp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_toEndOf="@+id/img_back"
+            android:fontFamily="@font/mont_regular"
+            android:gravity="center|start"
+            android:text="Sounds"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:gravity="center|end"
+            android:text="SAVE"
+            android:textColor="@color/blue" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/up_curve"
+        android:orientation="vertical">
+
+        <com.addisonelliott.segmentedbutton.SegmentedButtonGroup
+            android:id="@+id/segmented"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:background="@color/white"
+            android:elevation="1dp"
+            app:borderColor="@color/blue"
+            app:borderWidth="1dp"
+            app:position="0"
+            app:radius="10dp"
+            app:ripple="true"
+            app:selectedBackground="@color/blue">
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/mont_book"
+                android:padding="13dp"
+                app:selectedTextColor="@color/white"
+                app:text="Pills Tone"
+                app:textColor="@color/string_color" />
+
+            <com.addisonelliott.segmentedbutton.SegmentedButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/mont_book"
+                android:padding="13dp"
+                app:selectedTextColor="@color/white"
+                app:text="Device Ringtone"
+                app:textColor="@color/string_color" />
+
+        </com.addisonelliott.segmentedbutton.SegmentedButtonGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            tools:listitem="@layout/item_sounds" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_device_tones"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:visibility="gone"
+            tools:listitem="@layout/item_sounds" />
+
+    </LinearLayout>
+
+</LinearLayout>
